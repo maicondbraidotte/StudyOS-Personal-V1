@@ -2,5 +2,5 @@
 // NUNCA coloque a chave service_role/secret neste arquivo.
 window.STUDYOS_SUPABASE_CONFIG = {
   url: "https://mtkfcozmgclvdpctzogl.supabase.co",
-  anonKey: "COLE_SUA_CHAVE_PUBLISHABLE_OU_ANON_AQUI"
+  anonKey: "sb_publishable_rqzJklXGhcTzBvkCEQNelg_dQruApAm"
 };
