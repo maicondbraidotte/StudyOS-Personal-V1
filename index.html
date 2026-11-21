@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101114" />
+  <title>StudyOS — 2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="StudyOS início">
+        <span class="brand-mark">S<span>.</span></span>
+        <span><strong>STUDYOS</strong><small>PERSONAL ACADEMIC SYSTEM</small></span>
+      </a>
+      <div class="side-label">WORKSPACE</div>
+      <nav>
+        <button class="nav-item active" data-view="dashboard"><span>▦</span> Visão geral</button>
+        <button class="nav-item" data-view="weekly"><span>◷</span> Rotina semanal</button>
+        <button class="nav-item" data-view="calendar"><span>▦</span> Calendário</button>
+        <button class="nav-item" data-view="history"><span>▤</span> Histórico</button>
+        <button class="nav-item" data-view="timer"><span>◴</span> Cronômetro / Pomodoro</button>
+        <button class="nav-item" data-view="annual"><span>▤</span> Plano anual</button>
+        <button class="nav-item" data-view="subjects"><span>⌘</span> Disciplinas</button>
+        <button class="nav-item" data-view="gallery"><span>✦</span> Galeria anime</button>
+        <button class="nav-item" data-view="achievements"><span>♜</span> Conquistas</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="year-chip"><span class="pulse"></span> CICLO ATIVO <b>2027</b></div>
+        <p>Consistência acima de intensidade.</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="mobile-brand">STUDYOS <span>2027</span></div>
+        <div class="breadcrumb">WORKSPACE <span>/</span> <b id="crumb">VISÃO GERAL</b></div>
+        <div class="top-right"><span class="status-dot"></span> PLANO PESSOAL</div>
+      </header>
+
+      <section class="view active" id="dashboard">
+        <div class="page-heading">
+          <div><div class="eyebrow">PLANEJAMENTO PESSOAL • CICLO 2027</div><h1>Seu ano de <em>evolução.</em></h1>
+          <p class="muted">Um sistema para transformar intenção em consistência.</p></div>
+          <div class="year-display">2027<span> / 12 MESES</span></div>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card accent-card"><div class="stat-top">PROGRESSO GERAL <span>↗</span></div><div class="stat-value" id="overallPercent">0%</div><div class="progress-track"><div id="overallBar" class="progress-fill"></div></div><small id="overallCaption">Nenhuma sessão concluída ainda</small></article>
+          <article class="stat-card"><div class="stat-top">SESSÕES CONCLUÍDAS</div><div class="stat-value" id="doneCount">0<span class="stat-unit"> / 10</span></div><small>Na semana selecionada</small></article>
+          <article class="stat-card"><div class="stat-top">DISCIPLINAS ATIVAS</div><div class="stat-value">08</div><small>Entre formação geral e graduação</small></article>
+        </div>
+
+        <section class="companion-banner" id="companionBanner">
+          <div class="companion-symbol" id="companionSymbol">✦</div>
+          <div class="companion-copy"><div class="eyebrow" id="companionEyebrow">COMPANHEIRO ATIVO</div><h2 id="companionTitle">Escolha seu anime</h2><p id="companionDescription">Seu espaço de estudos acompanha a atmosfera da sua história favorita.</p>
+            <div class="companion-xp"><div class="xp-row"><span>EXPERIÊNCIA</span><b id="xpValue">0 XP</b></div><div class="xp-track"><i id="xpBar"></i></div><div class="level-row"><span id="levelName">NÍVEL 01 · INICIANTE</span><span id="xpNext">100 XP PARA O PRÓXIMO NÍVEL</span></div></div>
+          </div>
+          <button class="outline-button" data-goto="gallery">Mudar tema ↗</button>
+        </section>
+        <div class="section-heading"><div><div class="eyebrow">ACOMPANHAMENTO</div><h2>Esta semana</h2></div><button class="text-button" data-goto="weekly">Ver rotina completa ↗</button></div>
+        <div class="week-strip" id="dashboardWeek"></div>
+
+        <div class="dashboard-columns">
+          <section class="panel">
+            <div class="panel-heading"><div><div class="eyebrow">PLANEJAMENTO</div><h3>Etapas do ano</h3></div><span class="tiny-tag">2027</span></div>
+            <div id="phaseList" class="phase-list"></div>
+          </section>
+          <section class="panel">
+            <div class="panel-heading"><div><div class="eyebrow">FOCO DO CICLO</div><h3>Próximos passos</h3></div><span class="tiny-tag">LEMBRETE</span></div>
+            <div class="focus-list">
+              <div class="focus-item"><span class="focus-number">01</span><div><b>Construa a base</b><p>Priorize a compreensão dos fundamentos antes de avançar.</p></div></div>
+              <div class="focus-item"><span class="focus-number">02</span><div><b>Pratique ativamente</b><p>Resolva exercícios, escreva códigos e recupere conceitos de memória.</p></div></div>
+              <div class="focus-item"><span class="focus-number">03</span><div><b>Revise e ajuste</b><p>Use o fim de cada mês para identificar lacunas e reorganizar metas.</p></div></div>
+            </div>
+          </section>
+        </div>
+        <section class="panel achievement-preview">
+          <div class="panel-heading"><div><div class="eyebrow">PROGRESSO EXTRA</div><h3>Conquistas desbloqueadas</h3></div><button class="text-button" data-goto="achievements">Ver todas ↗</button></div>
+          <div id="achievementPreview" class="achievement-preview-grid"></div>
+        </section>
+      </section>
+
+      <section class="view" id="weekly">
+        <div class="page-heading compact"><div><div class="eyebrow">EXECUÇÃO</div><h1>Rotina <em>semanal.</em></h1><p class="muted">Marque cada sessão quando terminar. Seu progresso fica salvo neste navegador.</p></div></div>
+        <div class="week-controls"><div><label for="weekNumber">SEMANA DE ACOMPANHAMENTO</label><select id="weekNumber"></select></div><div class="week-summary"><b id="weekDone">0/10</b><span>SESSÕES CONCLUÍDAS</span></div></div>
+        <div id="weeklySchedule" class="schedule-grid"></div>
+        <div class="note-box"><span>i</span><p><b>Como funciona:</b> cada semana possui 10 sessões planejadas. As caixas de seleção são independentes por semana e ficam salvas no armazenamento local do navegador.</p></div>
+      </section>
+
+
+      <section class="view" id="calendar">
+        <div class="page-heading compact"><div><div class="eyebrow">VISÃO ANUAL</div><h1>Calendário <em>de estudos.</em></h1><p class="muted">Acompanhe os dias estudados, sessões concluídas e horas acumuladas em 2027.</p></div></div>
+        <div class="calendar-summary stats-grid"><article class="stat-card"><div class="stat-top">HORAS ESTUDADAS</div><div class="stat-value" id="calHours">0h</div><small>Tempo registrado em sessões</small></article><article class="stat-card"><div class="stat-top">SESSÕES CONCLUÍDAS</div><div class="stat-value" id="calSessions">0</div><small>Ao longo de 2027</small></article><article class="stat-card"><div class="stat-top">META MENSAL</div><div class="stat-value"><input id="monthlyGoal" type="number" min="1" max="300" value="20" class="goal-input"> h</div><small>Meta editável de horas por mês</small></article></div>
+        <div class="calendar-panel panel"><div class="calendar-toolbar"><button class="outline-button" id="prevMonth">← Anterior</button><h2 id="calendarMonth">Janeiro 2027</h2><button class="outline-button" id="nextMonth">Próximo →</button></div><div class="calendar-weekdays"><span>DOM</span><span>SEG</span><span>TER</span><span>QUA</span><span>QUI</span><span>SEX</span><span>SÁB</span></div><div id="calendarGrid" class="calendar-grid"></div><div class="calendar-legend"><span><i></i> Dia com estudo registrado</span><span id="monthProgress">0h / 20h na meta</span></div></div>
+      </section>
+      <section class="view" id="history">
+        <div class="page-heading compact"><div><div class="eyebrow">REGISTROS</div><h1>Histórico de <em>estudos.</em></h1><p class="muted">Consulte sessões por dia, semana ou mês e acompanhe sua consistência.</p></div></div>
+        <div class="history-controls"><label>PERÍODO <select id="historyRange"><option value="day">Hoje</option><option value="week" selected>Últimos 7 dias</option><option value="month">Este mês</option><option value="all">Todo o histórico</option></select></label><div class="history-total"><b id="historyHours">0h 00min</b><span id="historyCount">0 sessões</span></div></div>
+        <div class="history-layout"><section class="panel"><div class="panel-heading"><div><div class="eyebrow">ATIVIDADE</div><h3>Consistência diária</h3></div></div><div id="consistencyChart" class="consistency-chart"></div></section><section class="panel"><div class="panel-heading"><div><div class="eyebrow">DETALHAMENTO</div><h3>Sessões registradas</h3></div></div><div id="sessionHistory" class="session-history"></div></section></div>
+      </section>
+      <section class="view" id="timer">
+        <div class="page-heading compact"><div><div class="eyebrow">FOCO E PRODUTIVIDADE</div><h1>Tempo de <em>concentração.</em></h1><p class="muted">Registre sessões reais de estudo com cronômetro livre ou ciclos Pomodoro.</p></div></div>
+        <div class="timer-panel panel"><div class="timer-modes"><button class="timer-mode active" data-mode="pomodoro">Pomodoro</button><button class="timer-mode" data-mode="free">Cronômetro livre</button></div><div id="timerPhase" class="timer-phase">TEMPO DE FOCO · CICLO 1 DE 4</div><div id="timerDisplay" class="timer-display">25:00</div><div class="timer-progress"><i id="timerProgress"></i></div><div class="timer-settings"><label>DISCIPLINA<select id="timerSubject"></select></label><label>DURAÇÃO DO FOCO (MIN)<input id="focusMinutes" type="number" min="1" max="180" value="25"></label></div><div class="timer-actions"><button id="timerStart" class="primary-button">Iniciar</button><button id="timerReset" class="outline-button">Reiniciar</button><button id="timerFinish" class="outline-button">Concluir sessão</button></div><p class="timer-hint" id="timerHint">25 min de foco + 5 min de pausa. Após 4 ciclos, pausa longa de 15 min.</p><div class="pomodoro-count" id="pomodoroCount">○ ○ ○ ○ · 0/4 ciclos concluídos</div></div>
+      </section>
+
+      <section class="view" id="annual">
+        <div class="page-heading compact"><div><div class="eyebrow">ROADMAP</div><h1>Plano <em>anual.</em></h1><p class="muted">Quatro ciclos de aprendizagem, do fundamento à consolidação.</p></div></div>
+        <div id="annualPhases" class="annual-phases"></div>
+      </section>
+
+      <section class="view" id="subjects">
+        <div class="page-heading compact"><div><div class="eyebrow">CURRÍCULO</div><h1>Suas <em>disciplinas.</em></h1><p class="muted">Acompanhe as oito frentes que compõem seu plano de estudos.</p></div></div>
+        <div id="subjectGrid" class="subject-grid"></div>
+      </section>
+
+      <section class="view" id="gallery">
+        <div class="page-heading compact"><div><div class="eyebrow">PERSONALIZAÇÃO</div><h1>Galeria <em>anime.</em></h1><p class="muted">Escolha seu companheiro. Cada universo altera a atmosfera da interface.</p></div></div>
+        <div class="gallery-toolbar"><div><span class="eyebrow">UNIVERSOS DISPONÍVEIS</span><p>Selecione um card para aplicar o tema e ativar o companheiro.</p></div><span class="tiny-tag" id="activeThemeLabel">TEMA ATIVO</span></div>
+        <div id="animeGallery" class="anime-gallery"></div>
+        <div class="gallery-note">As artes dos personagens nesta versão são avatares gráficos originais em CSS, não imagens oficiais. A seleção e o tema ficam salvos neste navegador.</div>
+      </section>
+
+      <section class="view" id="achievements">
+        <div class="page-heading compact"><div><div class="eyebrow">SISTEMA DE PROGRESSÃO</div><h1>Suas <em>conquistas.</em></h1><p class="muted">Cada marco é desbloqueado conforme você registra seus estudos.</p></div></div>
+        <div class="achievement-topline"><div><strong id="achievementCount">0 / 7</strong><span> CONQUISTAS DESBLOQUEADAS</span></div><div class="achievement-track"><i id="achievementBar"></i></div></div>
+        <div id="achievementGrid" class="achievement-grid"></div>
+        <section class="panel final-boss-panel"><div><div class="eyebrow">ÚLTIMO DESAFIO</div><h3>Final Boss — Concluir o plano anual</h3><p>Quando terminar sua revisão e avaliação do ciclo de 2027, marque o plano como concluído para liberar a conquista final.</p></div><button id="annualCompleteBtn" class="primary-button">Marcar plano anual como concluído</button></section>
+      </section>
+
+      <footer><span>STUDYOS 2027 · VERSION 3.0</span><span>FEITO PARA APRENDER. CONSTRUÍDO PARA CONTINUAR.</span></footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
