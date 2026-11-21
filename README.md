@@ -47,3 +47,11 @@ Checklist, tema, companheiro, datas e conclusão anual ficam no `localStorage` d
 Os caminhos são configurados no início de `app.js`, no objeto `CHARACTER_IMAGES`. Coloque os arquivos na pasta `IMGS` e ajuste os nomes/extensões nesse objeto. Arquivos sugeridos: `miyamura.jpg`, `hori.jpg`, `gojo.jpg`, `kaneda.jpg`, `inuyasha.jpg`, `rintaro.jpg`, `kaoruko.jpg`, `mahiru.jpg`, `kirito.jpg`, `asuna.jpg` e `maomao.jpg`. Se uma imagem não existir, o avatar gráfico original continua aparecendo.
 
 A estrutura da pasta `IMGS` inclui um `LEIA-ME.txt` com a lista de arquivos esperados.
+
+
+## V4.1 — Integração com Supabase
+- Login, cadastro, logout e recuperação de senha.
+- Salvamento automático da rotina, preferências e histórico na tabela `studyos_data`.
+- Cache local para continuar usando o StudyOS sem conexão e sincronizar quando voltar.
+- Atualizações em tempo real entre dispositivos quando Realtime estiver habilitado.
+- Consulte `README-SUPABASE.md` para configurar a chave pública, autenticação e políticas RLS.
