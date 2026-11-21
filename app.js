@@ -34,14 +34,14 @@ const animeThemes = [
 // IMAGENS DOS PERSONAGENS — troque somente os caminhos abaixo.
 // Coloque os arquivos na pasta IMGS (ex.: IMGS/miyamura.jpg).
 const CHARACTER_IMAGES = {
- horimiya: ["IMGS/miyamura.jpg", "IMGS/hori.jpg"],
- jjk: ["IMGS/gojo.jpg"],
- akira: ["IMGS/kaneda.jpg"],
- inuyasha: ["IMGS/inuyasha.jpg"],
- kaoru: ["IMGS/rintaro.jpg", "IMGS/kaoruko.jpg"],
- otonari: ["IMGS/mahiru.jpg"],
- sao: ["IMGS/kirito.jpg", "IMGS/asuna.jpg"],
- kusuriya: ["IMGS/maomao.jpg"]
+ horimiya: ["IMGS/miyamura.png", "IMGS/hori.png"],
+ jjk: ["IMGS/gojo.png"],
+ akira: ["IMGS/kaneda.png"],
+ inuyasha: ["IMGS/inuyasha.png"],
+ kaoru: ["IMGS/rintaro.png", "IMGS/kaoruko.png"],
+ otonari: ["IMGS/mahiru.png"],
+ sao: ["IMGS/kirito.png", "IMGS/asuna.png"],
+ kusuriya: ["IMGS/maomao.png"]
 };
 const characterDescriptions = {
  horimiya:"Miyamura e Hori — companheiros para uma rotina de estudos leve e equilibrada.",
